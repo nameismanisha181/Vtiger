@@ -89,6 +89,26 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
+           <configuration>
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                                <version>${lombok.version}</version>
+                            </path>
+                        </annotationProcessorPaths>
+                        <compilerArguments>
+                            <verbose />
+                            <Xlint />
+                        </compilerArguments>
+                        <fork>true</fork>
+                        <verbose>true</verbose>
+                        <source>17</source>
+                        <target>17</target>
+                        <showWarnings>true</showWarnings>
+                        <compilerVersion>17</compilerVersion>
+                        <debug>true</debug>
+                    </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
